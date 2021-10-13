@@ -58,5 +58,6 @@
 1. Getting Started -> Installing browser drivers
 1. 选择对应浏览器内核的驱动下载对应浏览器版本的驱动
 
-mac 安装需要允许安装非 AppStore 来源的应用
+   (mac 安装需要允许安装非 AppStore 来源的应用)
+   (mac 将 chromedriver 放在 /usr/local/bin 下即可 windows 把 chromedriver 放在一个熟悉的路径 配置一下环境变量即可) 
 
