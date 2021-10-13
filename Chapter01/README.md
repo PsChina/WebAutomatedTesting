@@ -51,3 +51,12 @@
 
 如果 mac 安装的时候权限不够 请使用 pip install --user selenium 或者  pip3 install --user selenium
 
+## 下载安装浏览器驱动
+
+1. 查看浏览器版
+1. 打开 Selenium 官网: [https://www.selenium.dev](https://www.selenium.dev)
+1. Getting Started -> Installing browser drivers
+1. 选择对应浏览器内核的驱动下载对应浏览器版本的驱动
+
+mac 安装需要允许安装非 AppStore 来源的应用
+
