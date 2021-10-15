@@ -79,5 +79,5 @@ WebDriver 实际上启动了一个服务通过 WebDriver 和 浏览器之间通�
 | 4 | get_attribute() | 获得属性值 |
 | 5 | is_selected() | 是否被选中 |
 | 5 | is_enabled() | 是否可用 |
-| 5 | id_displayed() | 是否显示 |
+| 5 | is_displayed() | 是否显示 |
 | 5 | value_of_css_property() | css属性值 |
