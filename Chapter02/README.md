@@ -40,18 +40,44 @@ WebDriver 实际上启动了一个服务通过 WebDriver 和 浏览器之间通�
 
 | # | 属性 | 属性描叙 |
 |----|----|----|
-| 1 | dirver.name | 浏览器名称 |
-| 2 | dirver.current_url | 当前url |
-| 3 | dirver.title | 当前页面标题 |
-| 4 | dirver.page_source | 当前页面源码 |
-| 5 | dirver.current_window_handle | 窗口句柄 |
-| 6 | dirver.window_handles | 当前窗口所有句柄 |
+| 1 | driver.name | 浏览器名称 |
+| 2 | driver.current_url | 当前url |
+| 3 | driver.title | 当前页面标题 |
+| 4 | driver.page_source | 当前页面源码 |
+| 5 | driver.current_window_handle | 窗口句柄 |
+| 6 | driver.window_handles | 当前窗口所有句柄 |
 
 
 
 | # | 方法 | 方法描叙 |
 |----|----|----|
-| 1 | dirver.back | 返回到上个页面 |
-| 2 | dirver.refresh | 刷新当前页面 |
-| 3 | dirver.close | 关闭当前页面 |
-| 4 | dirver.quit | 关闭浏览器 |
+| 1 | driver.back() | 返回到上个页面 |
+| 2 | driver.refresh() | 刷新当前页面 |
+| 3 | driver.close() | 关闭当前页面 |
+| 4 | driver.quit() | 关闭浏览器 |
+
+## 掌握 WebElement 核心方法和属性的使用
+
+[http://sahitest.com/demo](http://sahitest.com/demo)
+
+这个链接提供了很多自动化测试需要用的页面
+
+| # | 属性 | 属性描叙 |
+|----|----|----|
+| 1 | id | 标示 |
+| 2 | size | 宽高 |
+| 3 | rect | 宽高和坐标 |
+| 4 | tag_name | 标签名称 |
+| 5 | text | 文本内容 |
+
+
+| # | 方法 | 方法描叙 |
+|----|----|----|
+| 1 | send_keys() | 输入内容 |
+| 2 | clear() | 清空内容 |
+| 3 | click()| 单击 |
+| 4 | get_attribute() | 获得属性值 |
+| 5 | is_selected() | 是否被选中 |
+| 5 | is_enabled() | 是否可用 |
+| 5 | id_displayed() | 是否显示 |
+| 5 | value_of_css_property() | css属性值 |

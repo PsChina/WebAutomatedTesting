@@ -12,20 +12,20 @@ from time import sleep
 # XPATH = 'xpath'
 
 
-def get_element(dirver, *loc):
-    e = dirver.find_element(*loc)
+def get_element(driver, *loc):
+    e = driver.find_element(*loc)
     return e
 
 if __name__ == '__main__':
     try:
         try:
-            dirver = webdriver.Chrome()
-            dirver.get('http://baidu.com')
+            driver = webdriver.Chrome()
+            driver.get('http://baidu.com')
             sleep(1)
-            get_element(dirver,By.ID,'kw').send_keys('你好')
-            get_element(dirver,By.ID,'su').click()
+            get_element(driver,By.ID,'kw').send_keys('你好')
+            get_element(driver,By.ID,'su').click()
             sleep(3)
         finally:
-            dirver.quit()
+            driver.quit()
     except :
         print('程序异常')

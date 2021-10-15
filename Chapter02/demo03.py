@@ -5,36 +5,36 @@ class TestCase:
     def __init__(self):
         try:
             try:
-                self.dirver = webdriver.Chrome()
-                self.dirver.get('http://wwww.baidu.com')
-                self.dirver.maximize_window()
+                self.driver = webdriver.Chrome()
+                self.driver.get('http://wwww.baidu.com')
+                self.driver.maximize_window()
             finally:
                 print('init done')
         except:
             print('error')
     def test_prop(self):
-        print(self.dirver.page_source)
-        print(self.dirver.name)
-        print(self.dirver.current_url)
-        print(self.dirver.title)
-        print(self.dirver.current_window_handle)
-        print(self.dirver.window_handles)
+        print(self.driver.page_source)
+        print(self.driver.name)
+        print(self.driver.current_url)
+        print(self.driver.title)
+        print(self.driver.current_window_handle)
+        print(self.driver.window_handles)
         sleep(1)
         print('test_prop done')
     def test_method(self):
-        self.dirver.find_element_by_id('kw').send_keys('掘金')
-        self.dirver.find_element_by_id('su').click()
+        self.driver.find_element_by_id('kw').send_keys('掘金')
+        self.driver.find_element_by_id('su').click()
         sleep(2)
-        self.dirver.back()
+        self.driver.back()
         sleep(2)
-        self.dirver.refresh()
+        self.driver.refresh()
         sleep(2)
-        self.dirver.forward()
+        self.driver.forward()
         sleep(2)
-        self.dirver.close()
+        self.driver.close()
         sleep(2)
     def quit(self):
-        self.dirver.quit()
+        self.driver.quit()
 
 
 if __name__ == '__main__':

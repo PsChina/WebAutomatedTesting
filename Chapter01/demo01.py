@@ -1,18 +1,18 @@
 from selenium import webdriver
 from time import sleep
 
-dirver = webdriver.Chrome()
+driver = webdriver.Chrome()
 
 
 class TestCase(object):
     def __init__(self):
-        self.dirver = webdriver.Chrome()
+        self.driver = webdriver.Chrome()
     def test(self):
-        self.dirver.get('http://www.baidu.com')
-        self.dirver.find_element_by_id('kw').send_keys('hello')
-        self.dirver.find_element_by_id('su').click()
+        self.driver.get('http://www.baidu.com')
+        self.driver.find_element_by_id('kw').send_keys('hello')
+        self.driver.find_element_by_id('su').click()
         sleep(4)
-        dirver.quit()
+        driver.quit()
 
 
 if __name__ == '__main__':
