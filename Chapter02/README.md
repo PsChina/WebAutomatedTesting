@@ -81,3 +81,16 @@ WebDriver 实际上启动了一个服务通过 WebDriver 和 浏览器之间通�
 | 5 | is_enabled() | 是否可用 |
 | 5 | is_displayed() | 是否显示 |
 | 5 | value_of_css_property() | css属性值 |
+
+
+## Selenium 操作 form 表单
+
+alert 的关闭 `driver.switch_to.alert.accept()`
+
+获取目录名
+
+```python
+import os
+dirname = os.path.dirname(os.path.abspath(__file__))
+filepath = 'file:///' + dirname + 'filename.suffix'
+```
