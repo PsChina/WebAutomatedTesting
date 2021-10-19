@@ -78,9 +78,9 @@ WebDriver 实际上启动了一个服务通过 WebDriver 和 浏览器之间通�
 | 3 | click()| 单击 |
 | 4 | get_attribute() | 获得属性值 |
 | 5 | is_selected() | 是否被选中 |
-| 5 | is_enabled() | 是否可用 |
-| 5 | is_displayed() | 是否显示 |
-| 5 | value_of_css_property() | css属性值 |
+| 6 | is_enabled() | 是否可用 |
+| 7 | is_displayed() | 是否显示 |
+| 8 | value_of_css_property() | css属性值 |
 
 
 ## Selenium 操作 form 表单
@@ -94,3 +94,46 @@ import os
 dirname = os.path.dirname(os.path.abspath(__file__))
 filepath = 'file:///' + dirname + 'filename.suffix'
 ```
+
+## 掌握 checkbox 和 radiobutton 的定位技巧
+
+```python
+class TestCase(object):
+    def __init__(self):
+        self.driver = webdriver.Chrome()
+        path = os.path.dirname(os.path.abspath(__file__))
+        file_path = 'file:///'+path+'/forms2.html'
+        self.driver.get(file_path)
+    def test_checkbox(self):
+        swimming = self.driver.find_element_by_name('swimming')
+        if not swimming.is_selected():
+            swimming.click()
+        sleep(3)
+        reading = self.driver.find_element_by_name('reading')
+        if not reading.is_selected():
+            reading.click()
+        sleep(5)
+        self.driver.quit()
+    def test_radio(self):
+        radios = self.driver.find_elements_by_name('gender')
+        sleep(2)
+        radios[0].click()
+        sleep(2)
+        self.driver.quit()
+```
+
+## Selenium 操作下拉列表
+
+
+| # | 方法/属性 | 方法/属性描叙 |
+|----|----|----|
+| 1 | select_by_value() | 根据值选择 |
+| 2 | select_by_index() | 根据索引选择 |
+| 3 | select_by_visible_text| 根据文本选择 |
+| 4 | deselect_by_value | 根据值反选 |
+| 5 | deselect_by_index | 根据索引反选 |
+| 6 | deselect_by_visible_text | 根据文本反选 |
+| 7 | deselect_all | 反选所有 |
+| 8 | options() | 所有选项 |
+| 9 | all_selected_options | 所有选中选项 |
+| 10 | first_selected_option | 第一个选择项 |
