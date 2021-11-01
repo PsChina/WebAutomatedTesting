@@ -137,3 +137,25 @@ class TestCase(object):
 | 8 | options() | 所有选项 |
 | 9 | all_selected_options | 所有选中选项 |
 | 10 | first_selected_option | 第一个选择项 |
+
+
+## 弹框处理： 掌握alert、confirm、prompt三种弹出的用法
+
+页面上的弹框有三种:
+
+alert:用来提示
+
+confirm:用来确认
+
+prompt：输入内容
+
+
+| # | 方法/属性 | 方法/属性描叙 |
+|----|----|----|
+| 1 | accept() | 接受 |
+| 2 | dismiss() | 取消 |
+| 3 | text | 显示的文本 |
+| 4 | send_keys | 输入内容 |
+
+
+`self.driver.switch_to.alert` 能获取到当前页面正在活动的弹框(包含`alert`、`confirm`、`prompt`)
