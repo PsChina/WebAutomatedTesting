@@ -13,16 +13,6 @@
 1. 在path里面新建一个路径粘贴第一步复制好的路径
 1. 打开命令行输入 python 验证是否安装配置成功
 
-### Mac
-
-1. which python3 复制路径 （which python）
-1. cd ~/
-1. vi .bash_profile
-1. o
-1. 粘贴路径到 .bash_profile
-1. esc :wq
-
-
 ## pip 环境变量的配置
 
 ### Windows
@@ -31,17 +21,6 @@
 1. 复制这个路径。
 1. 和配置 python.exe 一样吧 pip.exe 也设置到 系统变量 里面的 path 里面。
 1. 打开命令行输入 pip list 验证是否配置成功
-
-
-### Mac
-
-1. which pip3 复制路径 （which pip）
-1. cd ~/
-1. vi .bash_profile
-1. o
-1. 粘贴路径到 .bash_profile
-1. esc :wq
-
 
 
 ### 安装 Selenium 模块
