@@ -159,3 +159,31 @@ prompt：输入内容
 
 
 `self.driver.switch_to.alert` 能获取到当前页面正在活动的弹框(包含`alert`、`confirm`、`prompt`)
+
+
+## Selenium 三种等待方式
+
+1. implicitly_wait (隐式等待)
+
+隐式等待实际是设置了一个最长等待时间，如果在规定时间内网页加载完成，则执行下一步，否则一直等到时间结束，然后执行下一步。这样的隐式等待会有个坑，我们都知道 JavaScript 一般都是放在我们的 body 的最后进行加载，实际这是页面上元素都已经加载完毕，我们却还在等待全部页面加载结束。
+
+
+隐式等待对整个 driver 周期都起作用，在最开始设置一次就可以了。不要当作固定等待使用，到哪都来一下隐式等待。
+
+1. WebDriverWait (显示等待)
+
+webDriverWait 是 selenium 提供得到显示等待模块引入路径：
+```python
+from selenium.webdriver.support.wait import WebDriverWait
+```
+webDriverWait 参数
+
+|  #  | 参数 | 参数说明
+|----|----|----|
+| 1 | driver | 传入 WebDriver 实例 |
+| 2 | timeout | 超时时间，等待的最长时间 |
+| 3 | poll_frequency | 调用 unitil 或 until_not 中的方法的间隔时间，默认是 0.5 秒 |
+| 4 | ignored_exceptions | 忽略异常 |
+
+这个模块中，一共只有两个方法 until 与 until_not 。
+
