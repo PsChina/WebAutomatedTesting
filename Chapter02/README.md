@@ -170,7 +170,7 @@ prompt：输入内容
 
 隐式等待对整个 driver 周期都起作用，在最开始设置一次就可以了。不要当作固定等待使用，到哪都来一下隐式等待。
 
-1. WebDriverWait (显示等待)
+2. WebDriverWait (显示等待)
 
 webDriverWait 是 selenium 提供得到显示等待模块引入路径：
 ```python
@@ -187,3 +187,4 @@ webDriverWait 参数
 
 这个模块中，一共只有两个方法 until 与 until_not 。
 
+3. time.sleep (不推荐)
